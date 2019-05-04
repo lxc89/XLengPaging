@@ -1,0 +1,45 @@
+﻿{
+  "XPageSize": [
+    {
+      "pagesize": 2,
+      "selected": false
+    },
+    {
+      "pagesize": 5,
+      "selected": false
+    },
+    {
+      "pagesize": 10,
+      "selected": true
+    },
+    {
+      "pagesize": 15,
+      "selected": false
+    },
+    {
+      "pagesize": 20,
+      "selected": false
+    },
+    {
+      "pagesize": 25,
+      "selected": false
+    },
+    {
+      "pagesize": 30,
+      "selected": false
+    },
+    {
+      "pagesize": 40,
+      "selected": false
+    },
+    {
+      "pagesize": 50,
+      "selected": false
+    },
+    {
+      "pagesize": 100,
+      "selected": false
+    }
+  ],
+  "XCodeNum": 5
+}

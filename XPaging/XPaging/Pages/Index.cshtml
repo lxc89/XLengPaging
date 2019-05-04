@@ -1,0 +1,95 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "XPaging测试页";
+}
+<link href="~/lib/XPaging/XPaging.css" rel="stylesheet" />
+<style type="text/css">
+    *, *::before, *::after {
+        box-sizing: content-box;
+    }
+
+    table {
+        width: 50%;
+        border-top: 1px solid #808080;
+        border-left: 1px solid #808080;
+    }
+
+        table th {
+            background: #0094ff;
+            color: #fff;
+            border-right: 1px solid #808080;
+            border-bottom: 1px solid #808080;
+        }
+
+        table td {
+            border-right: 1px solid #808080;
+            border-bottom: 1px solid #808080;
+        }
+</style>
+<div class="text-center">
+    <form id="form1">
+        @*<input id="btn_search" type="button" value="查询" />*@
+        <table>
+            <tr>
+                <th>选择</th>
+                <th>姓名</th>
+                <th>性别</th>
+                <th>年龄</th>
+            </tr>
+            <tr v-for="item in TabData">
+                <td>
+                    <input type="checkbox" :value="item.ID" />
+                </td>
+                <td>{{item.Name}}</td>
+                <td>{{item.Sex}}</td>
+                <td>{{item.Age}}</td>
+            </tr>
+        </table>
+        <x-paging v-bind:codelist="codelist" v-bind:total="total" v-bind:pagelist="pagelist"></x-paging>
+    </form>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/vue.min.js"></script>
+    <script src="~/lib/XPaging/XPaging-2.0.min.js?1"></script>
+    <script type="text/javascript">
+        var databind = new Vue({
+            el: '#form1',
+            data: {
+                TabData: [],
+                total: 0,
+                codelist: [],
+                pagelist: []
+            },
+            created: function () {
+                XPaging.config({ DataBindFunc: "getData" }).init(this);
+                setTimeout("getData();", 200);
+            }
+        });
+
+        //获取数据
+        function getData() {
+            var list = [];
+            var begin = XPaging.GetPageSize() * (XPaging.GetCurrentPageIndex() - 1),
+                end = XPaging.GetPageSize() * XPaging.GetCurrentPageIndex()
+            for (var i = begin; i < end; i++) {
+                var data = {
+                    ID: i,
+                    Name: "姓名" + i,
+                    Sex: i % 2 == 0 ? "女" : "男",
+                    Age: "年龄" + i
+                }
+                list.push(data);
+            }
+            databind.TabData = list;
+            databind.total = 1000;
+            XPaging.init(databind);
+        }
+
+        $(function () {
+            $("#btn_search").click(function () {
+                XPaging.config({ CurrentPageIndex: 1 });
+                getData();
+            });
+        });
+    </script>
+</div>

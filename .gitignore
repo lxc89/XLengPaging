@@ -1,0 +1,10 @@
+﻿################################################################################
+# 此 .gitignore 文件已由 Microsoft(R) Visual Studio 自动创建。
+################################################################################
+
+/XPaging/.vs/XPaging
+/.vs
+/XPaging/XPaging/bin/Debug/netcoreapp2.2
+/XPaging/XPaging/obj
+/XPaging/XPaging/wwwroot/lib/XPaging/XPaging-1.0.min.js
+/XPaging/XPaging/wwwroot/lib/XPaging/XPaging-1.0.js

@@ -1,0 +1,119 @@
+﻿/*
+    分页控件样式库
+*/
+.pagenum {
+    float: left;
+    /*border-top: 1px solid #C0C0C0;
+    border-bottom: 1px solid #C0C0C0;
+    border-right: 1px solid #C0C0C0;*/
+    height: 26px;
+    line-height: 26px;
+    font-size: 14px;
+    margin-top: 8px;
+    margin-bottom: 7px;
+    vertical-align: middle;
+    /*悬浮*/
+    /*z-index: 1000;
+    position: absolute;
+    left: 5px;
+    bottom: 5px;
+    opacity: .8;
+    filter: alpha(opacity=80);
+    background-color: #FFF;*/
+}
+
+    /*页码格子*/
+    .pagenum a {
+        text-decoration: none;
+        /*border-left: 1px solid #C0C0C0;*/
+        text-align: center;
+        display: block;
+        float: left;
+        height: 16px;
+        line-height: 16px;
+        padding: 5px 7px 5px 7px;
+        vertical-align: middle;
+        min-width: 16px;
+        border-radius: 2px;
+        margin-right: 5px;
+    }
+
+        .pagenum a:link, a:visited {
+            text-decoration: none;
+        }
+
+        .pagenum a:hover, a:active {
+            text-decoration: none;
+        }
+
+        .pagenum a:hover {
+            background-color: #f15a22;
+            opacity: .7;
+            filter: alpha(opacity=70);
+            color: #ffffff;
+        }
+
+/*总记录数*/
+.number {
+    color: #F30;
+    /*font-weight: bold;
+    text-decoration: underline;*/
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+/*每页记录数*/
+.pagemsg {
+    /*border-left: 1px solid #C0C0C0;*/
+    text-align: center;
+    display: block;
+    float: left;
+    height: 26px;
+    line-height: 26px;
+    /*padding: 3px 10px 3px 0px;*/
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+/*Button样式*/
+/*.pagenum input {
+    border: none;
+    border-left: 1px solid #C0C0C0;
+    text-align: center;
+    float: left;
+    height: 35px;
+    vertical-align: middle;
+    min-width: 40px;
+    cursor: pointer;
+    font-size: 15px;
+    font-family: 'Verdana';
+}
+
+    .pagenum input:hover {
+        background-color: #f15a22;
+        opacity: .7;
+        filter: alpha(opacity=70);
+        color: #ffffff;
+    }*/
+
+
+/*当前页码*/
+.currindex {
+    color: #FFF;
+    background: #009ad6;
+}
+
+/*侯选页*/
+.waitpage {
+    color: #4f5555;
+    background: #F0f0f0;
+}
+
+.pagenum select {
+    margin-right: 4px;
+    height: 22px;
+    padding: 0px 0px;
+    font-size: 13px;
+    font-weight: bold;
+    color: #F30;
+}
