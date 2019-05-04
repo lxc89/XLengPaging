@@ -2,4 +2,4 @@
 
 在目录 wwwroot\lib\XPaging 中
 
-测试页为 Index
+测试页为 Pages/Index.cshtml 默认启动页
