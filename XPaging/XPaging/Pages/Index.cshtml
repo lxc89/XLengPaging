@@ -61,7 +61,9 @@
                 pagelist: []
             },
             created: function () {
+                //分页控件初始化
                 XPaging.config({ DataBindFunc: "getData" }).init(this);
+                //因为我是同步操作，若是使用ajax获取数据，则无需加延迟
                 setTimeout("getData();", 200);
             }
         });
@@ -69,6 +71,7 @@
         //获取数据
         function getData() {
             var list = [];
+            //因为直接使用控件的方法，没加判断，所以上面将控件初始化了，若是判断刚进页面，则上面只需配置，无需初始化
             var begin = XPaging.GetPageSize() * (XPaging.GetCurrentPageIndex() - 1),
                 end = XPaging.GetPageSize() * XPaging.GetCurrentPageIndex()
             for (var i = begin; i < end; i++) {
@@ -80,12 +83,14 @@
                 }
                 list.push(data);
             }
+            //不加延迟，数据属性获取不到
             databind.TabData = list;
             databind.total = 1000;
             XPaging.init(databind);
         }
 
         $(function () {
+            //查询
             $("#btn_search").click(function () {
                 XPaging.config({ CurrentPageIndex: 1 });
                 getData();
