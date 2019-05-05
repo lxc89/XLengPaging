@@ -73,7 +73,7 @@
             var list = [];
             //因为直接使用控件的方法，没加判断，所以上面将控件初始化了，若是判断刚进页面，则上面只需配置，无需初始化
             var begin = XPaging.GetPageSize() * (XPaging.GetCurrentPageIndex() - 1),
-                end = XPaging.GetPageSize() * XPaging.GetCurrentPageIndex()
+                end = XPaging.GetPageSize() * XPaging.GetCurrentPageIndex() > 1000 ? 1000 : XPaging.GetPageSize() * XPaging.GetCurrentPageIndex();
             for (var i = begin; i < end; i++) {
                 var data = {
                     ID: i,
