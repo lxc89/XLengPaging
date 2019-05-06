@@ -1,8 +1,8 @@
 # XPaging
 基于Vue和jQuery的分页组件
 
-https://travis-ci.com/lxc89/XPaging.svg?branch=master
-[![Build Status](https://travis-ci.com/lxc89/XPaging.svg?branch=master)](https://travis-ci.com/lxc89/XPaging)
+https://img.shields.io/chocolatey/dt/XPaging.svg
+[![Build Status](https://travis-ci.com/lxc89/XPaging.svg?branch=master)](https://travis-ci.com/lxc89/XPaging
 
 插件源码在目录wwwroot \ lib \ XPaging中
 
