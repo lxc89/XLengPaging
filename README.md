@@ -1,5 +1,5 @@
 # XPaging
-# 基于Vue和jQuery的分页组件
+# 基于Vue.js和jQuery的分页组件
 
 源码在目录wwwroot\lib\XPaging中
 
